@@ -2,12 +2,16 @@
 
 Dieses **öffentliche Release-Repository enthält ausschließlich kundenseitig installierbare Softwarepakete**, nicht den privaten Entwicklungs-Quellcode, keine produktiven Datenbanken, keine Artikelbilder und keine Geheimnisse. Software und Container sind proprietär und ausschließlich gemäß gesondert vereinbarten Nutzungsrechten zu verwenden.
 
+## Sicherheitsupdate vom 28. Oktober 2026
+
+**CVE-2026-111497:** Das ältere Release `v2026.10.27` ist für Neuinstallationen gesperrt. Diese Version enthält neu gebaute API-/Nginx-/Postgres-Images, gepatchtes `brotli-libs 1.2.1-r0` im Nginx-Container und verwendet Node.js 22.23.4 im Build. Verwende ausschließlich das neue versionierte Paket; eine vorhandene Kundeninstallation muss separat aktualisiert werden. Die öffentliche Distribution enthält **keine** Kundendaten oder Zugangsdaten.
+
 ## Ubuntu 24.04 LTS amd64
 
 Auf einer neuen Ubuntu-VM mit administrativem SSH-Zugang:
 
 ```bash
-curl -fsSLo /tmp/price-studio-install.sh https://raw.githubusercontent.com/Meilleur-Tech/Price-Studio-Releases/v2026.10.27/install.sh && sudo bash /tmp/price-studio-install.sh
+curl -fsSLo /tmp/price-studio-install.sh https://raw.githubusercontent.com/Meilleur-Tech/Price-Studio-Releases/v2026.10.28-security/install.sh && sudo bash /tmp/price-studio-install.sh
 ```
 
 Der Downloader lädt das versionierte, SHA256-gepinnte Paket, prüft auch dessen internes Dateimanifest und startet `/opt/price-studio/release/setup.sh`.
