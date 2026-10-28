@@ -22,10 +22,10 @@ if ! command -v curl >/dev/null; then
     DOWNLOADER=curl
   fi
 else DOWNLOADER=curl; fi
-VERSION=v2026.10.27
-ASSET=price-studio-onprem-v2026.10.27.tar.gz
-URL=https://github.com/Meilleur-Tech/Price-Studio-Releases/releases/download/v2026.10.27/price-studio-onprem-v2026.10.27.tar.gz
-SHA256=c2d597c23178636178165b42fc52a2339295519d1b9020c2970be6e0b7b0356b
+VERSION=v2026.10.28-security
+ASSET=price-studio-onprem-v2026.10.28-security.tar.gz
+URL=https://github.com/Meilleur-Tech/Price-Studio-Releases/releases/download/v2026.10.28-security/price-studio-onprem-v2026.10.28-security.tar.gz
+SHA256=d54cd1cd32a9ba98ec0871539ed0c7b5917bbfeca6acad56c2f2e51c57f8d7ce
 install -d -m 0700 /opt/price-studio
 TMP=$(mktemp -d /opt/price-studio/.download.XXXXXXXX) || fail 'Temporäres Verzeichnis konnte nicht angelegt werden.'
 trap 'rm -rf "$TMP"' EXIT
